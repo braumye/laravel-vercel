@@ -1,0 +1,36 @@
+{
+    "name": "braumye/laravel-vercel",
+    "description": "Vercel resources for laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "braumye",
+            "email": "braum.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Braumye\\LaravelVercel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Braumye\\LaravelVercel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Braumye\\LaravelVercel\\ServiceProvider"
+            ]
+        }
+    }
+}
