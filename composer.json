@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Braumye\\LaravelVercel\\ServiceProvider"
+                "Braumye\\LaravelVercel\\LaravelVercelServiceProvider"
             ]
         }
     }
