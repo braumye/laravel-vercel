@@ -24,7 +24,6 @@ class PublishVercelCommand extends Command
     {
         $this->call('vendor:publish', [
             '--tag' => 'laravel-vercel',
-            '--force' => true,
         ]);
     }
 }
