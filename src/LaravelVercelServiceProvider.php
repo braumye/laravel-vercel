@@ -3,6 +3,7 @@
 namespace Braumye\LaravelVercel;
 
 use Braumye\LaravelVercel\Console\PublishVercelCommand;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelVercelServiceProvider extends ServiceProvider
@@ -28,6 +29,13 @@ class LaravelVercelServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([PublishVercelCommand::class]);
+        }
+    }
+
+    public function boot()
+    {
+        if (env('VERCEL')) {
+            URL::forceScheme('https');
         }
     }
 }
