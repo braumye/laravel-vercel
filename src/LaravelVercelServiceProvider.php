@@ -34,7 +34,7 @@ class LaravelVercelServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        if (env('VERCEL')) {
+        if (env('HTTP_X_VERCEL_ID')) {
             URL::forceScheme('https');
         }
     }
